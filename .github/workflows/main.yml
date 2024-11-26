@@ -1,0 +1,33 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Paso 1: Chequear el repositorio
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Paso 2: Configurar Java 11
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin' # Alternativa: adopt, zulu, etc.
+
+    # Paso 3: Construir y probar el proyecto usando Maven
+    - name: Build with Maven
+      run: mvn install
+
+    # Paso 4: Ejecutar pruebas
+    - name: Run tests
+      run: mvn test
