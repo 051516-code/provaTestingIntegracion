@@ -11,7 +11,7 @@ public class HelperMethodsTest {
 	@Test
 	public void testCadastrarMotoboyDuplicado() {
 	    metodosHelper hr = new metodosHelper();
-	    hr.cadastrarMotoboy("Carlos");
+	    hr.cadastrarMotoboy("");
 	    hr.cadastrarMotoboy("Carlos");
 	    List<String> motoboys = hr.listarMotoboys();
 	    assertEquals(2, motoboys.size());
