@@ -1,4 +1,4 @@
-name: Java CI
+name: Java CI with Maven
 
 on:
   push:
@@ -13,21 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Paso 1: Chequear el repositorio
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Paso 2: Configurar Java 11
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'temurin' # Alternativa: adopt, zulu, etc.
+      - name: Set up JDK 11 (Adoptium Temurin)
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'   # Cambia 'adoptopenjdk' por 'temurin'
+          
+      - name: Verify Maven
+        run: mvn --version
 
-    # Paso 3: Construir y probar el proyecto usando Maven
-    - name: Build with Maven
-      run: mvn install
+      - name: Build with Maven
+        run: mvn clean install -DskipTests=true
 
-    # Paso 4: Ejecutar pruebas
-    - name: Run tests
-      run: mvn test
+      - name: Run tests
+        run: mvn test
