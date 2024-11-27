@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="testandohelper.EmpresaManagerTest" time="0.162" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="testandohelper.EmpresaManagerTest" time="0.25" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\amdress\AppData\Local\Temp\surefire8104316977289461309\surefirebooter-20241126230445288_3.jar C:\Users\amdress\AppData\Local\Temp\surefire8104316977289461309 2024-11-26T23-04-45_059-jvmRun1 surefire-20241126230445288_1tmp surefire_0-20241126230445288_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\amdress\AppData\Local\Temp\surefire2128344103082163556\surefirebooter-20241126231338758_3.jar C:\Users\amdress\AppData\Local\Temp\surefire2128344103082163556 2024-11-26T23-13-38_351-jvmRun1 surefire-20241126231338758_1tmp surefire_0-20241126231338758_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\amdress\Desktop\testingProvaFinal\target\test-classes;C:\Users\amdress\Desktop\testingProvaFinal\target\classes;C:\Users\amdress\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\amdress\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\amdress\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\amdress\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\amdress\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\amdress\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\amdress\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\amdress\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\amdress\AppData\Local\Temp\surefire8104316977289461309\surefirebooter-20241126230445288_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\amdress\AppData\Local\Temp\surefire2128344103082163556\surefirebooter-20241126231338758_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.1+12-LTS-29"/>
@@ -59,46 +59,46 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testClearAllEmpresas" classname="testandohelper.EmpresaManagerTest" time="0.047">
+  <testcase name="testClearAllEmpresas" classname="testandohelper.EmpresaManagerTest" time="0.084">
     <system-out><![CDATA[Empresa añadida: Empresa A
 Todas las empresas han sido eliminadas.
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdateEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.005">
+  <testcase name="testUpdateEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.007">
     <system-out><![CDATA[Empresa añadida: Empresa A
 Empresa actualizada: Empresa A Actualizada
 ]]></system-out>
   </testcase>
-  <testcase name="testGetEmpresasByServiceType" classname="testandohelper.EmpresaManagerTest" time="0.005">
+  <testcase name="testGetEmpresasByServiceType" classname="testandohelper.EmpresaManagerTest" time="0.004">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testAddEmpresaWithDuplicateCNPJ" classname="testandohelper.EmpresaManagerTest" time="0.008">
+  <testcase name="testAddEmpresaWithDuplicateCNPJ" classname="testandohelper.EmpresaManagerTest" time="0.009">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testAddEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.004">
+  <testcase name="testAddEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.003">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.006">
+  <testcase name="testDeleteEmpresa" classname="testandohelper.EmpresaManagerTest" time="0.018">
     <system-out><![CDATA[Empresa añadida: Empresa A
 Empresa eliminada: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testGetEmpresasByServiceDay" classname="testandohelper.EmpresaManagerTest" time="0.004">
+  <testcase name="testGetEmpresasByServiceDay" classname="testandohelper.EmpresaManagerTest" time="0.005">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testFindEmpresaByCNPJ" classname="testandohelper.EmpresaManagerTest" time="0.006">
+  <testcase name="testFindEmpresaByCNPJ" classname="testandohelper.EmpresaManagerTest" time="0.005">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testFindEmpresaByName" classname="testandohelper.EmpresaManagerTest" time="0.002">
+  <testcase name="testFindEmpresaByName" classname="testandohelper.EmpresaManagerTest" time="0.004">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
-  <testcase name="testIsCNPJTaken" classname="testandohelper.EmpresaManagerTest" time="0.003">
+  <testcase name="testIsCNPJTaken" classname="testandohelper.EmpresaManagerTest" time="0.005">
     <system-out><![CDATA[Empresa añadida: Empresa A
 ]]></system-out>
   </testcase>
