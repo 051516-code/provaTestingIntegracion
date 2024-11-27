@@ -3,10 +3,10 @@ name: Java CI with Maven
 on:
   push:
     branches:
-      - main   # O la rama que prefieras
+      - main
   pull_request:
     branches:
-      - main   # O la rama que prefieras
+      - main
 
 jobs:
   build:
@@ -16,12 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 11
+      - name: Set up JDK 11 (Adoptium Temurin)
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'adoptopenjdk'
-
+          distribution: 'temurin'   # Cambia 'adoptopenjdk' por 'temurin'
+          
       - name: Verify Maven
         run: mvn --version
 
