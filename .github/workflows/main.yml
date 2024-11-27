@@ -3,10 +3,10 @@ name: Java CI with Maven
 on:
   push:
     branches:
-      - main  # O la rama que desees, por ejemplo, 'master'
+      - main   # O la rama que prefieras, como 'master'
   pull_request:
     branches:
-      - main  # O la rama que desees
+      - main   # O la rama que prefieras
 
 jobs:
   build:
@@ -21,13 +21,22 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
-          distribution: 'adoptopenjdk'
+          java-version: '11'   # Definir la versión de Java que usa el proyecto
+          distribution: 'adoptopenjdk'  # Usar la distribución de AdoptOpenJDK
 
-      # 3. Instalar dependencias y compilar el proyecto
+      # 3. Verificar Maven (Asegúrate de tener Maven instalado)
+      - name: Verify Maven
+        run: mvn --version   # Esto verificará que Maven esté instalado correctamente
+
+      # 4. Instalar dependencias y compilar el proyecto
       - name: Build with Maven
-        run: mvn clean install -DskipTests=false
+        run: mvn clean install -DskipTests=true  # Compila el proyecto, pero omite las pruebas
 
-      # 4. Ejecutar las pruebas
+      # 5. Ejecutar las pruebas
       - name: Run tests
-        run: mvn test
+        run: mvn test  # Ejecuta las pruebas
+
+      # (Opcional) 6. Empaquetar el proyecto
+      - name: Package project
+        run: mvn package  # Empaque el proyecto si lo necesitas (creará el archivo JAR/WAR)
+
